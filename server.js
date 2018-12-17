@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 let PORT = process.env.PORT || 8080
 
-let url = 'mongodb://marco:Lapapera1@ds125422.mlab.com:25422/mcgt1';
+let url = 'mongodb://io:Lapapera1@ds125422.mlab.com:25422/mcgt1';
 
 let mongoose = require('mongoose');
 mongoose.connect(url, {useNewUrlParser: true}, (err) => {
