@@ -12,8 +12,10 @@ app.use(bodyParser.json());
 
 let PORT = process.env.PORT || 8080
 
+let url = 'mongodb://MCGT:FA957019@ds125422.mlab.com:25422/mcgt1';
+
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/mcgt1', {useNewUrlParser: true}, (err) => {
+mongoose.connect(url, {useNewUrlParser: true}, (err) => {
     if (err) throw err;
     console.log('connected to db')
 });
