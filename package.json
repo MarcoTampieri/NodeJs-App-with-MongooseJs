@@ -2,7 +2,8 @@
   "name": "node-api",
   "main": "server.js",
   "scripts": {
-    "start": "server.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "test":  "echo \"Error\""  },
   "dependencies": {
     "body-parser": "~1.0.1",
