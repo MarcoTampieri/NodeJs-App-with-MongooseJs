@@ -1,6 +1,8 @@
 //*******************************
 // SET UP
 //*******************************
+//require('dotenv').config();
+
 let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
@@ -10,9 +12,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-let PORT = process.env.PORT || 8080
+let port = process.env.PORT || 8080
 
-let url = 'mongodb://io:Lapapera1@ds125422.mlab.com:25422/mcgt1';
+let url = process.env.DATA_BASE;//'mongodb://io:Lapapera1@ds125422.mlab.com:25422/mcgt1';
 
 let mongoose = require('mongoose');
 mongoose.connect(url, {useNewUrlParser: true}, (err) => {
@@ -133,5 +135,5 @@ app.use('/api', router)
 //*******************************
 // ROUTES FOR API
 //*******************************
-app.listen(PORT);
-console.log('Do you believe in magic? ' + PORT);
+app.listen(port);
+console.log('Do you believe in magic? ' + port);

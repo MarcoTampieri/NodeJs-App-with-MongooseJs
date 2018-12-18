@@ -4,9 +4,11 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "test":  "echo \"Error\""  },
+    "test": "echo \"Error\""
+  },
   "dependencies": {
     "body-parser": "~1.0.1",
+    "dotenv": "^6.2.0",
     "express": "~4.0.0",
     "mongoose": "^5.3.16"
   }
