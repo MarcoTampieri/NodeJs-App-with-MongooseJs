@@ -16,6 +16,8 @@ let port = process.env.PORT || 8080
 
 let url = process.env.DATA_BASE;//'mongodb://io:Lapapera1@ds125422.mlab.com:25422/mcgt1';
 
+console.log(url);
+
 let mongoose = require('mongoose');
 mongoose.connect(url, {useNewUrlParser: true}, (err) => {
     if (err) throw err;
